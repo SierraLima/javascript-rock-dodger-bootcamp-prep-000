@@ -131,6 +131,12 @@ function moveDodger(e) {
    */
    if ([LEFT_ARROW, RIGHT_ARROW].indexOf(code) > -1) {
      e.prevenDefault()
+     e.stopPropagation()
+   }
+   if (code === LEFT_ARROW) {
+     moveDodgerLeft()
+   } else if (code === RIGHT_ARROW) {
+     moveDodgerRight()
    }
 }
 
